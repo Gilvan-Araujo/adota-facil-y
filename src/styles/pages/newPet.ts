@@ -1,7 +1,6 @@
 import {
   Button as MUIButton,
   FormControl as MUIFormControl,
-  RadioGroup as MUIRadioGroup,
   TextField as MUITextField
 } from '@material-ui/core'
 import styled from 'styled-components'
@@ -62,16 +61,6 @@ export const ImageDropzoneLabel = styled.label`
 
 export const FormControl = styled(MUIFormControl)`
   width: 230px;
-`
-
-export const RadioGroup = styled(MUIRadioGroup)`
-  justify-content: center;
-  width: 230px;
-  height: 56px;
-
-  label {
-    margin: 0;
-  }
 `
 
 export const LargeInput = styled(MUITextField)`

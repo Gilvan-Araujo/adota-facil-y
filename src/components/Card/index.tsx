@@ -1,5 +1,4 @@
 import {
-  CardActions,
   CardContent,
   CardHeader,
   CardMedia,
@@ -14,15 +13,10 @@ import {
   makeStyles
 } from '@material-ui/core'
 import { red } from '@material-ui/core/colors'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
-import WhatsAppIcon from '@material-ui/icons/WhatsApp'
-import clsx from 'clsx'
 import React, { useState } from 'react'
 import NumberFormat from 'react-number-format'
 import { Pet } from 'types'
-
-import Slider from '@components/Slider'
 
 export type CardProps = {
   pet: Pet
@@ -118,44 +112,9 @@ export default function Card({ pet }: CardProps) {
       <CardMedia className={classes.media} image={pet.image} title={pet.name} />
       <CardContent>
         <Typography variant="subtitle2" color="textSecondary" component="p">
-          Deslize para mais detalhes / <br /> Abra o menu para mais opções
+          Abra o menu para mais opções
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <IconButton
-          aria-label="mandar mensagem no whatsapp"
-          disableRipple
-          disableTouchRipple
-          disableFocusRipple
-        >
-          <WhatsAppIcon />
-        </IconButton>
-        <Slider
-          leftCommitted
-          leftFunction={() => {
-            window.open(pet.phoneContact, '_blank')
-          }}
-          middleFunction={() => {
-            setExpanded(false)
-          }}
-          rightCommitted={false}
-          rightFunction={() => {
-            setExpanded(true)
-          }}
-        />
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded
-          })}
-          aria-expanded={expanded}
-          aria-label="mostrar mais"
-          disableRipple
-          disableTouchRipple
-          disableFocusRipple
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography

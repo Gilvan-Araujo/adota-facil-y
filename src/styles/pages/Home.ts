@@ -18,42 +18,6 @@ export const HomeContainer = styled.div`
   }
 `
 
-export const OptionsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  height: 100%;
-
-  .slider {
-    width: 25vw;
-  }
-
-  div {
-    transition: all 0.5s ease-in-out;
-    font-size: 1rem;
-    padding: 10px;
-    margin: 10px;
-
-    &.highlight {
-      transition: all 0.5s ease-in-out;
-      padding: 20px;
-      font-size: 1.25rem;
-      background-color: ${theme.palette.secondary.light};
-      color: ${theme.palette.primary.contrastText};
-    }
-  }
-
-  @media (max-width: 430px) {
-    flex-direction: column-reverse;
-
-    .slider {
-      height: 25vh !important;
-    }
-  }
-`
-
 export const MenuContainer = styled.div`
   display: flex;
   flex-direction: row;
