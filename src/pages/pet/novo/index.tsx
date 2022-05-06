@@ -158,7 +158,7 @@ const Form = () => {
               data-cy="type-select"
               label="Tipo"
             >
-              <MenuItem value="cCachorro" data-cy="type-dog">
+              <MenuItem value="cachorro" data-cy="type-dog">
                 Cachorro
               </MenuItem>
               <MenuItem value="gato" data-cy="type-cat">
